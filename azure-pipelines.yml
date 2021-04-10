@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-    - master
+    - main
     - dev
   paths:
     include:
@@ -15,7 +15,7 @@ variables:
 stages:
 - stage: prod
   displayName: prod
-  condition: eq(variables['build.sourceBranchName'], 'master'))
+  condition: eq(variables['build.sourceBranchName'], 'main'))
   jobs:
   - job: Deploy_ZBEE_SERVER
     pool:
