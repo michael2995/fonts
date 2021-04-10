@@ -9,7 +9,7 @@ pr: none
 variables:
   group: SomeVariableGroup
   ${{ if eq(variables['Build.SourceBranchName'], 'master') }}
-  stageName: prod
+    stageName: prod
 
 jobs:
 - job: Deploy_ZBEE_SERVER
