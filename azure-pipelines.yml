@@ -12,7 +12,7 @@ variables:
 stages:
 - stage: prod
   displayName: prod
-  condition: eq(variables['build.sourceBranchName'], 'main'))
+  condition: eq(variables['build.sourceBranchName'], 'main')
   jobs:
   - job: Deploy_ZBEE_SERVER
     pool:
@@ -28,7 +28,7 @@ stages:
         
 - stage: dev
   displayName: dev
-  condition: eq(variables['build.sourceBranchName'], 'dev'))
+  condition: eq(variables['build.sourceBranchName'], 'dev')
   jobs:
   - job: Deploy_ZBEE_SERVER
     pool:
