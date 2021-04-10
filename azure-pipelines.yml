@@ -10,7 +10,7 @@ variables:
   group: SomeVariableGroup
   ${{ if eq(variables['Build.SourceBranchName'], 'master') }}
     stageName: prod
-  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}
+  ${{ if nq(variables['Build.SourceBranchName'], 'dev') }}
     stageName: dev
 
 jobs:
