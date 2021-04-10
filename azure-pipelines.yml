@@ -25,18 +25,9 @@ stages:
       inputs:
         versionSpec: '12.x'
     - script: |
-        echo "//registry.npmjs.org/:_authToken=$(NPM-TOKEN)" > ~/.npmrc
-        npm -g install yarn
-      displayName: "settings"
+        echo working
     - script: |
-        export AWS_ACCESS_KEY_ID=$(AWS-ACCESS-KEY-ID-PROD)
-        export AWS_SECRET_ACCESS_KEY=$(AWS-SECRET-ACCESS-KEY-PROD)
-        export AWS_DEFAULT_REGION="ap-northeast-2"
-        cd zbee-server
-        cp ci/serverless.yml ./
-        yarn
-        yarn build
-        yarn deploy prod
+        echo working
         
 - stage: dev
   displayName: dev
