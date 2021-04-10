@@ -7,7 +7,7 @@ trigger:
 pr: none
 
 variables:
-  - group: AzureKeyVaults
+  - group: SomeVariableGroup
 
 stages:
 - stage: prod
