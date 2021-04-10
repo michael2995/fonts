@@ -12,6 +12,8 @@ pool:
 variables:
   ${{ if eq(variables['Build.SourceBranchName'], 'main') }}: # only works if you have a main branch
     stageName: prod
+  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}: # only works if you have a main branch
+    stageName: dev
 
 
 steps:
